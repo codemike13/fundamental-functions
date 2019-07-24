@@ -109,10 +109,13 @@ console.log("# Challenge #9");
 // Now write a function that consoles out the movies in alphabetical order, using Array.sort() (look up how to use it, but you shouldn't have to put anything in `.sort`'s parentheses!). Be SURE that you make a COPY of the array before you do so, as otherwise your function will re-arrange the original array and you'll lose the chronological ordering!
 function movieSort(arr) {
   arrSort = arr.slice(0);
-  return arrSort.sort();
+  arrSort.sort();
+  for (arr in arrSort) {
+    console.log(arrSort[arr]);
+  }
 }
 
-console.log(movieSort(seanBeanMovies));
+movieSort(seanBeanMovies);
 
 console.log("# Challenge #10");
 // Did you notice how the Lord of the Rings movies got sorted under "T" for "The"? We'd prefer they be listed under "L", because otherwise such titles can be very difficult to find.
@@ -122,7 +125,7 @@ console.log("# Challenge #10");
 // Modify your alphabetical printing function from the challenge above so that it changes that global array, without declaring a new array.
 
 // Your alphabetical printing function should still work. Call it again at the end of this challenge!
-function movieSort(array) {
+function movieSortSwap(array) {
   arr = array.slice(0);
   arr.sort();
   let wordHold = "";
@@ -145,7 +148,7 @@ function movieSort(array) {
 //  word1 = word2
 //  word2 = swap
 //
-movieSort(moviesCopy);
+movieSortSwap(moviesCopy);
 //
 // wordHold = moviesCopy[0].toString().split(" ").reverse().toString()
 // console.log(wordHold)
