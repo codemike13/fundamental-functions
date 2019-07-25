@@ -29,9 +29,9 @@ const seanBeanShows = [
 
 console.log("# Challenge #1");
 // Create a function that console.logs every item in the movie list. Now call that function.
-function printMovies(arr) {
-  for (movie in seanBeanMovies) {
-    console.log(seanBeanMovies[movie]);
+function printMovies(array) {
+  for (arr in array) {
+    console.log(array[arr]);
   }
 }
 
@@ -39,9 +39,9 @@ printMovies(seanBeanMovies);
 
 console.log("# Challenge #2");
 // Create a function that console.logs every item in the TV list. Now call that function.
-function printShows(arr) {
-  for (show in seanBeanShows) {
-    console.log(seanBeanShows[show]);
+function printShows(array) {
+  for (arr in array) {
+    console.log(array[arr]);
   }
 }
 
@@ -51,9 +51,9 @@ console.log("# Challenge #3");
 // There's an order to the array items, but only if you're a major tv or movie buff--or, like this project's author, a minor Sean Bean buff--would you notice;
 //they're listed chronologically, newest first. Now write a function that consoles out the movies in oldest-first order, and call that function.
 
-function printMoviesReverese(arr) {
-  for (i = seanBeanMovies.length - 1; i >= 0; i--) {
-    console.log(seanBeanMovies[i]);
+function printMoviesReverese(array) {
+  for (i = array.length - 1; i >= 0; i--) {
+    console.log(array[i]);
   }
 }
 
@@ -62,9 +62,9 @@ printMoviesReverese(seanBeanMovies);
 console.log("# Challenge #4");
 // Now do the same as above, but for TV shows.
 
-function printShowsReverese(arr) {
-  for (i = seanBeanShows.length - 1; i >= 0; i--) {
-    console.log(seanBeanShows[i]);
+function printShowsReverese(array) {
+  for (i = array.length - 1; i >= 0; i--) {
+    console.log(array[i]);
   }
 }
 
@@ -95,10 +95,10 @@ printShowsAndMovies();
 
 console.log("# Challenge #8");
 // Write a function that consoles out any movies in the Lord of the Rings series. Now call it!
-function ringLords(arr) {
-  for (movie in seanBeanMovies) {
-    if (seanBeanMovies[movie].startsWith("The Lord")) {
-      console.log(seanBeanMovies[movie]);
+function ringLords(array) {
+  for (arr in array) {
+    if (array[arr].startsWith("The Lord")) {
+      console.log(array[arr]);
     }
   }
 }
@@ -108,7 +108,7 @@ ringLords(seanBeanMovies);
 console.log("# Challenge #9");
 // Now write a function that consoles out the movies in alphabetical order, using Array.sort() (look up how to use it, but you shouldn't have to put anything in `.sort`'s parentheses!). Be SURE that you make a COPY of the array before you do so, as otherwise your function will re-arrange the original array and you'll lose the chronological ordering!
 function movieSort(arr) {
-  arrSort = arr.slice(0);
+  let arrSort = arr.slice(0);
   arrSort.sort();
   for (arr in arrSort) {
     console.log(arrSort[arr]);
@@ -117,7 +117,7 @@ function movieSort(arr) {
 
 movieSort(seanBeanMovies);
 
-console.log("# Challenge #10");
+console.log("# Challenge #10  &&  #11");
 // Did you notice how the Lord of the Rings movies got sorted under "T" for "The"? We'd prefer they be listed under "L", because otherwise such titles can be very difficult to find.
 
 // Declare the alphabetized copy of your array from the last function GLOBALLY, outside your function, near (but after) the seanBeanMovies definition at the top. Use a let to declare it, and make it a copy of the seanBeanMovies array, just like we did in the function originally.
